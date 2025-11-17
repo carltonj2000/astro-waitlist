@@ -15,5 +15,6 @@ bun create astro .
 bun i
 # The astro lsp require a local dev install of prettier.
 bun i -D prettier prettier-plugin-astro
+bun i -D prettier-plugin-tailwindcss
 bunx astro add tailwind
 ```
