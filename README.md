@@ -13,5 +13,7 @@ Create in GitHub, then cloned, then
 ```bash
 bun create astro .
 bun i
-
+# The astro lsp require a local dev install of prettier.
+bun i -D prettier prettier-plugin-astro
+bunx astro add tailwind
 ```
