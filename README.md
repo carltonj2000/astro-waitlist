@@ -17,4 +17,9 @@ bun i
 bun i -D prettier prettier-plugin-astro
 bun i -D prettier-plugin-tailwindcss
 bunx astro add tailwind
+# eslint setup
+bun install --save-dev eslint eslint-plugin-astro
+bun install --save-dev @typescript-eslint/parser
+# add react support
+bunx astro add react
 ```

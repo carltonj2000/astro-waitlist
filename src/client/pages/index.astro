@@ -1,8 +1,10 @@
 ---
 import HelloWorld from "../components/HelloWorld.astro";
+import { Hi } from "../components/Hi.tsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <HelloWorld />
+  <Hi client:only={true} />
 </Layout>
