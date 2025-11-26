@@ -27,4 +27,8 @@ bunx astro add react
 bun add -D daisyui@latest
 # for icons
 bun add lucide-react
+# for server
+bun add hono
+# cloudflare cli 
+bun add -D wrangler
 ```
