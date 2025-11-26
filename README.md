@@ -5,6 +5,7 @@
 The code in this repo is based on the following:
 
 - https://youtu.be/2iPG2tqUICs?si=CF2BngdZuUhhEUU5
+- UI from https://daisyui.com
 
 ## Creation History
 
@@ -22,4 +23,8 @@ bun install --save-dev eslint eslint-plugin-astro
 bun install --save-dev @typescript-eslint/parser
 # add react support
 bunx astro add react
+# for ui
+bun add -D daisyui@latest
+# for icons
+bun add lucide-react
 ```

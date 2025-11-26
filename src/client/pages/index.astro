@@ -1,10 +1,27 @@
 ---
-import HelloWorld from "../components/HelloWorld.astro";
-import { Hi } from "../components/Hi.tsx";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Signup from "../components/Signup.tsx";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
-  <HelloWorld />
-  <Hi client:only={true} />
+  <Hero />
+  <div class="flex justify-center p-4">
+    <Signup />
+  </div>
+  <div class="space-y-6 p-4 md:flex md:gap-4 md:space-y-0">
+  <Card
+    title="Get Interview Ready"
+    description="Need to bursh up on your JavaScript skills for an interview? This fast paced code kata platform will get you ready in no time."
+  />
+  <Card
+    title="Review AI Slop Faster"
+    description="Spending too much time reading AI generated code? This platform will teach yo the ins and outs of JavaScript so you know when AI is misleading you."
+  />
+  <Card
+    title="Code Faster"
+    description="Build muscle memory so you can code faster with out draining you mental energy."
+  />
+  </div>
 </Layout>
