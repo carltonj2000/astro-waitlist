@@ -1,10 +1,18 @@
 {
-  "plugins": ["prettier-plugin-astro"],
+  "plugins": [
+    "prettier-plugin-astro"
+  ],
   "overrides": [
     {
       "files": "*.astro",
       "options": {
         "parser": "astro"
+      }
+    },
+    {
+      "files": "wrangler.jsonc",
+      "options": {
+        "trailingComma": "none"
       }
     }
   ]

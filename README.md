@@ -29,6 +29,8 @@ bun add -D daisyui@latest
 bun add lucide-react
 # for server
 bun add hono
-# cloudflare cli 
+# cloudflare cli
 bun add -D wrangler
+# for auth middleware
+bun add jose
 ```

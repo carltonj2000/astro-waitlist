@@ -1,5 +1,23 @@
 {
   "name": "waitlist",
   "main": "src/server/index.ts",
-  "compatibility_date": "2025-11-18"
+  "compatibility_date": "2025-11-18",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "CF_ACCESS_DOMAIN": "https://carltonjoseph.cloudflareaccess.com",
+        "POLICY_AUD": "8308c5f767f1ba84ab56f7f19d19e80493de24e2cb166e3bacde8a00e542b9c7"
+      }
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
 }
