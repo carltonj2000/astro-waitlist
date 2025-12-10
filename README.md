@@ -33,4 +33,8 @@ bun add hono
 bun add -D wrangler
 # for auth middleware
 bun add jose
+# install cloudflare db
+bunx wrangler@latest d1 create dojo_staging_db
+bunx wrangler d1 execute dojo_local_db --local --file=./schema.sql
+bunx wrangler d1 execute dojo_local_db --local --command="SELECT * FROM Customers"
 ```

@@ -1,23 +1,37 @@
 {
-  "name": "waitlist",
-  "main": "src/server/index.ts",
-  "compatibility_date": "2025-11-18",
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  },
-  "env": {
-    "staging": {
-      "vars": {
-        "ENVIRONMENT": "staging",
-        "CF_ACCESS_DOMAIN": "https://carltonjoseph.cloudflareaccess.com",
-        "POLICY_AUD": "8308c5f767f1ba84ab56f7f19d19e80493de24e2cb166e3bacde8a00e542b9c7"
-      }
-    },
-    "production": {
-      "vars": {
-        "ENVIRONMENT": "production"
-      }
-    }
-  }
+	"name": "waitlist",
+	"main": "src/server/index.ts",
+	"compatibility_date": "2025-11-18",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"d1_databases": [
+		{
+			"binding": "db",
+			"database_name": "dojo_local_db",
+			"database_id": "123"
+		}
+	],
+	"env": {
+		"staging": {
+			"vars": {
+				"ENVIRONMENT": "staging",
+				"CF_ACCESS_DOMAIN": "https://carltonjoseph.cloudflareaccess.com",
+				"POLICY_AUD": "8308c5f767f1ba84ab56f7f19d19e80493de24e2cb166e3bacde8a00e542b9c7"
+			},
+			"d1_databases": [
+				{
+					"binding": "db",
+					"database_name": "dojo_staging_db",
+					"database_id": "caa76e6e-22a3-4def-bcf3-add2a1e6e45d"
+				}
+			]
+		},
+		"production": {
+			"vars": {
+				"ENVIRONMENT": "production"
+			}
+		}
+	}
 }
