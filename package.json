@@ -15,7 +15,10 @@
     "dryrun:staging": "bun run build:client && wrangler deploy --dry-run --env staging",
     "dryrun:prod": "bun run build:client && wrangler deploy --dry-run --env production",
     "deploy:staging": "bun run build:client && wrangler deploy --env staging",
-    "deploy:prod": "bun run build:client && wrangler deploy --env production"
+    "deploy:prod": "bun run build:client && wrangler deploy --env production",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply dojo_local_db --local",
+    "db:migrate:staging": "wrangler d1 migrations apply dojo_staging_db --remote --env staging"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -25,6 +28,7 @@
     "@typescript-eslint/parser": "^8.47.0",
     "astro": "^5.16.4",
     "concurrently": "^9.2.1",
+    "drizzle-orm": "^0.45.1",
     "eslint": "^9.39.1",
     "eslint-plugin-astro": "^1.5.0",
     "hono": "^4.10.7",
@@ -35,7 +39,9 @@
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251216.0",
     "daisyui": "^5.5.8",
+    "drizzle-kit": "^0.31.8",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.1",

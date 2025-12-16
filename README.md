@@ -37,4 +37,8 @@ bun add jose
 bunx wrangler@latest d1 create dojo_staging_db
 bunx wrangler d1 execute dojo_local_db --local --file=./schema.sql
 bunx wrangler d1 execute dojo_local_db --local --command="SELECT * FROM Customers"
+# add orm
+bun add drizzle-orm
+bun add -D drizzle-kit
+bun add -d @cloudflare/workers-types
 ```
