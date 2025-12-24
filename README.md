@@ -41,4 +41,6 @@ bunx wrangler d1 execute dojo_local_db --local --command="SELECT * FROM Customer
 bun add drizzle-orm
 bun add -D drizzle-kit
 bun add -d @cloudflare/workers-types
+# for testing
+bun add -d @types/bin
 ```

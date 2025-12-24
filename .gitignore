@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # cloudflare cli - should we comment the next line
 # .wrangler/
+
+# cj add start
+test.sqlite
+# cj add start
